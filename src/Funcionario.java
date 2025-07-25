@@ -1,5 +1,7 @@
 
 public class Funcionario {
+	
+	private int codigo;
 	private String nome;
 	private double salario;
 	public static double valeRefeicaoDiario = 20;
@@ -24,6 +26,12 @@ public class Funcionario {
 		Funcionario.valeRefeicaoDiario += Funcionario.valeRefeicaoDiario * taxa;
 	}
 	
+	public int getCodigo() {
+		return codigo;
+	}
+	public void setCodigo(int codigo) {
+		this.codigo = codigo;
+	}
 	public String getNome() {
 		return nome;
 	}
