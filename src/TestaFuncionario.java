@@ -8,6 +8,7 @@ public class TestaFuncionario {
 		
 		System.out.println("Nome: " + f.getNome());
 		System.out.println("Salário: " + f.getSalario());
+		System.out.println(f);
 		
 	}
 }

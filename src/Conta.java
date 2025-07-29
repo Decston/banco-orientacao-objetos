@@ -104,5 +104,57 @@ public class Conta {
 	public void setExtrato(String extrato) {
 		this.extrato = extrato;
 	}
+
+	@Override
+	public String toString() {
+		return "Conta [numero=" + numero + ", saldo=" + saldo + ", limite=" + limite + ", agencia=" + agencia
+				+ ", extrato=" + extrato + ", qtdMovimentacoes=" + qtdMovimentacoes + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((agencia == null) ? 0 : agencia.hashCode());
+		result = prime * result + ((extrato == null) ? 0 : extrato.hashCode());
+		long temp;
+		temp = Double.doubleToLongBits(limite);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		result = prime * result + numero;
+		result = prime * result + qtdMovimentacoes;
+		temp = Double.doubleToLongBits(saldo);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Conta other = (Conta) obj;
+		if (agencia == null) {
+			if (other.agencia != null)
+				return false;
+		} else if (!agencia.equals(other.agencia))
+			return false;
+		if (extrato == null) {
+			if (other.extrato != null)
+				return false;
+		} else if (!extrato.equals(other.extrato))
+			return false;
+		if (Double.doubleToLongBits(limite) != Double.doubleToLongBits(other.limite))
+			return false;
+		if (numero != other.numero)
+			return false;
+		if (qtdMovimentacoes != other.qtdMovimentacoes)
+			return false;
+		if (Double.doubleToLongBits(saldo) != Double.doubleToLongBits(other.saldo))
+			return false;
+		return true;
+	}
 	
 }
