@@ -1,5 +1,5 @@
 
-public class Funcionario {
+public abstract class Funcionario {
 	
 	private int codigo;
 	private String nome;
@@ -13,10 +13,7 @@ public class Funcionario {
 		System.out.println("Valor Bonificação: " + this.calculaBonificacao());
 	}
 	
-	public double calculaBonificacao() {
-		System.out.println("Bonificação Geral");
-		return this.salario * 0.1;
-	}
+	public abstract double calculaBonificacao();
 	
 	void aumentaSalario(double aumento) {
 		this.salario += aumento;

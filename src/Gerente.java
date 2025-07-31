@@ -12,7 +12,7 @@ public class Gerente extends Funcionario {
 	
 	public double calculaBonificacao() {
 		System.out.println("Bonificação Gerente");
-		return this.getSalario() * 0.6 + 100;
+		return this.getSalario() * 0.2 + 300;
 	}
 	
 	public String getUsuario() {

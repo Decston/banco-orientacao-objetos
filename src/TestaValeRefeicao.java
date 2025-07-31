@@ -5,7 +5,7 @@ public class TestaValeRefeicao {
 		Funcionario.reajustaValeRefeicaoDiario(1);
 		System.out.println("Novo valor vale refeição diário:");
 		
-		Funcionario f = new Funcionario();
+		Funcionario f = new Gerente();
 		f.setNome("Alisson");
 		//f.salario = 10000;
 		

@@ -1,11 +1,13 @@
 
-public class Conta {
+public abstract class Conta {
 	private int numero;
 	private double saldo = 0;
 	private double limite = 100;
 	private Agencia agencia;
 	private String extrato = "Extrato: \n";
 	private int qtdMovimentacoes = 0;
+	
+	public abstract void imprimeExtratoDetalhado();
 	
 	public Conta() {
 		

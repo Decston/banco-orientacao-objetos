@@ -8,6 +8,11 @@ public class Secretaria extends Funcionario {
 		System.out.println("Ramal: " + this.getRamal());
 	}
 	
+	public double calculaBonificacao() {
+		System.out.println("Bonificação Gerente");
+		return this.getSalario() * 0.2 + 300;
+	}
+	
 	public int getRamal() {
 		return ramal;
 	}

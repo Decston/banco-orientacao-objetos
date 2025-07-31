@@ -1,13 +1,13 @@
 
 public class TestaEquals {
 	public static void main(String[] args) {
-		Funcionario f1 = new Funcionario();
+		Funcionario f1 = new Gerente();
 		
 		f1.setCodigo(1);
 		f1.setNome("Alisson");
 		f1.setSalario(10000);
 		
-		Funcionario f2 = new Funcionario();
+		Funcionario f2 = new Telefonista();
 		f2.setCodigo(1);
 		f2.setNome("Alisson");
 		f2.setSalario(10000);

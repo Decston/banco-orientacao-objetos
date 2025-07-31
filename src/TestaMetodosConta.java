@@ -3,7 +3,10 @@ public class TestaMetodosConta {
 	public static void main(String[] args) {
 		Agencia a = new Agencia(16055);
 		
-		Conta c = new Conta(1000, a);
+		//Conta c = new Conta(1000, a);
+		ContaPoupanca c = new ContaPoupanca();
+		c.setNumero(1000);
+		c.setAgencia(a);
 		
 		System.out.println("Dados Conta");
 		System.out.println("Agência Conta: " + c.getAgencia().numero);
